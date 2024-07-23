@@ -8,7 +8,7 @@ public:
         sort(nums.begin(), nums.end());
 
         int G = 0;
-        int maxGap;
+        int maxGap=0;
         for (int i = 1; i < nums.size(); i++) {
             int G = nums[i] - nums[i - 1];
             maxGap = max(maxGap, G);
