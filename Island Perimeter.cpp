@@ -1,14 +1,3 @@
-//int arr[]=[1,2,3,4]
-//or
-//vector<int> arr={1,2,3,4}
-//A vector in which all value are vector type
-//int a[];
-//int b[];
-//int c[];
-//int arr[3][3]{1,2,3},{4,5,6},{7,8,9}
-//Collection of the vector is known as 2D array
-//vector<vector<int>v1={{1,2,3},{4,5,6},{7,8,9}}
-//v1[0][2]
 class Solution {
 public:
     int islandPerimeter(vector<vector<int>>& grid) {
