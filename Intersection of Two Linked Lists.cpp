@@ -13,3 +13,22 @@ Node* findIntersection(Node *firstHead, Node *secondHead) {
 
     return ptr1;
 }
+
+//second approach
+#include<unordered_set>
+using namespace std;
+Node* findIntersection(Node *firstHead, Node *secondHead)
+{
+unordered_set<Node *> ob;
+while(firstHead!=NULL){
+    ob.insert(firstHead);
+    firstHead=firstHead->next;
+}
+while(secondHead!=NULL){
+    if(ob.find(secondHead)!=ob.end())
+         return secondHead;
+else
+    secondHead=secondHead->next;
+}
+return NULL;
+}
