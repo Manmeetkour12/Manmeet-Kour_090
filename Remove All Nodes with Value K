@@ -1,0 +1,17 @@
+Node *removeNodes(Node *head, int k) {
+    if(head==NULL) 
+        return NULL;
+    while(head != NULL && head->data==k) 
+        head=head->next;
+    Node* curr=head;
+    Node* prev=NULL;
+    while(curr){
+        if(curr->data==k){
+            prev->next=curr->next;
+        }
+        else{
+            prev=curr;
+        }
+        curr=curr->next;
+    }
+    return head}
