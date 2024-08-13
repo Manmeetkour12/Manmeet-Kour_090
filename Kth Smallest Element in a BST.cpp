@@ -28,22 +28,21 @@ public:
 class Solution {
 public:
 void inorder(TreeNode* root,vector<int> &res) {
-int count=0;
-    int result=-1;
+int count=0,m=0;
     void inorder(TreeNode* root, int k) {
-        if (root == NULL || count >= k) {
-            return;
-        }
+        if (root != NULL) {
         inorder(root->left, k);
         count++;
         if (count == k) {
-            result = root->val;
+            m=root->val;
             return;
         }
         inorder(root->right, k);
     }
+    
+}
     int kthSmallest(TreeNode* root, int k) {
         inorder(root, k);
-        return result;
+        return m;
     }
 };
